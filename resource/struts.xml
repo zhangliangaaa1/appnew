@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<constant name="struts.action.extension" value="do" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.multipart.maxSize" value="100000000000000000"/>
+	<constant name="struts.devMode" value="false" />
+	
+	<package name="ajax" namespace="/ajax" extends="json-default">
+	    <action name="*_order" method="{1}" class="com.yili.action.AjaxAction">
+			<result type="json"/>
+			<result name="show">/showOrder.jsp</result>
+			<result name="fixed">/FixedSelect.jsp</result>
+			<result name="dync">/dyncSelect.jsp</result>
+			<result name="result">/result.jsp</result>
+			<result name="error">/error.jsp</result>
+			<result name="myTodo" type="redirect">http://emoa.yili.com:89/weavernorth/MobileGoBack.jsp</result>
+		</action>
+    </package>
+    <!-- 手机APP操作action -->
+    <package name="app" namespace="/app" extends="json-default">
+	    <action name="*_app" method="{1}" class="com.yili.action.AppAction">
+	    <result type="json"/>
+			<result name="show">/showOrder.jsp</result>
+			<result name="fixed">/FixedSelect.jsp</result>
+			<result name="dync">/dyncSelect.jsp</result>
+			<result name="result">/result.jsp</result>
+			<result name="error">/error.jsp</result>
+			<result name="myTodo" type="redirect">http://222.74.13.245:89/weavernorth/MobileGoBack.jsp</result>
+		</action>
+    </package>
+    <!-- 手机APP功公共组件action -->
+    <package name="control" namespace="/control" extends="json-default">
+	    <action name="*_control" method="{1}" class="com.yili.action.ControlAction">
+	    <result type="json"/>
+			<result name="show">/showOrder.jsp</result>
+			<result name="fixed">/FixedSelect.jsp</result>
+			<result name="dync">/dyncSelect.jsp</result>
+			<result name="result">/result.jsp</result>
+			<result name="error">/error.jsp</result>
+			<result name="myTodo" type="redirect">http://222.74.13.245:89/weavernorth/MobileGoBack.jsp</result>
+		</action>
+    </package>
+    <!-- 手机APP报账单保存action -->
+    <package name="claim" namespace="/claim" extends="json-default">
+	    <action name="*_claim" method="{1}" class="com.yili.action.ClaimAction">
+	    <result type="json"/>
+			<result name="show">/showOrder.jsp</result>
+			<result name="fixed">/FixedSelect.jsp</result>
+			<result name="dync">/dyncSelect.jsp</result>
+			<result name="result">/result.jsp</result>
+			<result name="error">/error.jsp</result>
+			<result name="myTodo" type="redirect">http://222.74.13.245:89/weavernorth/MobileGoBack.jsp</result>
+		</action>
+    </package>
+    <!-- 手机APP报账单保存action -->
+    <package name="invoice" namespace="/invoiceFolder" extends="json-default">
+	    <action name="*_invoiceFolder" method="{1}" class="com.yili.action.AppInvoiceFolderAction">
+	    <result type="json"/>
+			<result name="show">/showOrder.jsp</result>
+			<result name="fixed">/FixedSelect.jsp</result>
+			<result name="dync">/dyncSelect.jsp</result>
+			<result name="result">/result.jsp</result>
+			<result name="error">/error.jsp</result>
+			<result name="myTodo" type="redirect">http://222.74.13.245:89/weavernorth/MobileGoBack.jsp</result>
+		</action>
+    </package>
+</struts>
